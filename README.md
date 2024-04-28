@@ -2,7 +2,7 @@
 **italics = to be determined**
 
 ### Backend
-- *NodeJS (via Bun) OR GoLang* 
+- *NodeJS (via Bun or Express)* 
 
 ### Frontend
 - [Sveltekit](https://kit.svelte.dev/docs/introduction)
