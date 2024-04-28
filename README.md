@@ -1,5 +1,5 @@
 # Tutor-Site
-italics = to be determined
+**italics = to be determined**
 
 ### Backend
 - *NodeJS (via Bun) OR GoLang* 
