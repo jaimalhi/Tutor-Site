@@ -10,4 +10,4 @@
 - *floating-ui (Popups)*
 
 ### Database
-- Supabase
+- [Supabase](https://supabase.com/docs)
