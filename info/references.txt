@@ -1,0 +1,5 @@
+https://supabase.com/docs/guides/getting-started/quickstarts/sveltekit
+
+https://www.youtube.com/watch?v=lSm0GNnh-0I&ab_channel=Huntabyte
+
+https://www.youtube.com/watch?v=1tsUB58KX2s&ab_channel=BenDavis
