@@ -8,11 +8,11 @@ export default {
       themes: [
          {
             avio: {
-               primary: "#a991f7",
-               secondary: "#f6d860",
-               accent: "#37cdbe",
-               neutral: "#3d4451",
-               base: "#ffffff",
+               primary: "#31A9BF",
+               secondary: "#FF5FBF",
+               accent: "#FFC908",
+               neutral: "#9EA39F",
+               "base-100": "#ffffff",
             },
          },
          "dim",
