@@ -16,7 +16,7 @@
       </a>
       <a class="link link-hover" id="icons">
          <img src="/icons/telephone.png" alt="email-icon" />
-         +1 775 989 0044
+         +1 778 989 0044
       </a>
    </nav>
 </footer>
