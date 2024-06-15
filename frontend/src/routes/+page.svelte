@@ -1,6 +1,32 @@
-<script>
-   import Carousel from "$lib/components/layout/landing/Carousel.svelte";
-   import TypingEffect from "$lib/components/layout/landing/TypingEffect.svelte";
+<script lang="ts">
+   import Carousel from "$lib/components/landing-page/Carousel.svelte";
+   import TypingEffect from "$lib/components/landing-page/TypingEffect.svelte";
+   import InfoCard from "$lib/components/utils/InfoCard.svelte";
+   import type { InfoCardProps } from "$lib/components/utils/infoCard.ts";
+
+   const infoCard1: InfoCardProps = {
+      heading: "Personalized 1-on-1 Lessons",
+      description:
+         "Following a thorough review of your performance, objectives, and curriculum in our complimentary Zoom consultation, we develop a personalized lesson plan that aligns with your learning approach and timetable.",
+      linkText: "See how it works",
+      src: "laptop.png",
+      alt: "laptop on desk",
+      textOffset: "left",
+      widthClass: "w-5/12",
+      borderColor: "border-yellow-400",
+   };
+
+   const infoCard2: InfoCardProps = {
+      heading: "Learn from Top University Grad Tutors",
+      description:
+         "Our experienced tutors, who are graduates of top universities, are  experts in their respective fields and able to teach at all levels. They are not only intellectually adept but also compassionate and captivating in their teaching approach.",
+      linkText: "Contact Us",
+      src: "laptop.png",
+      alt: "laptop on desk",
+      textOffset: "right",
+      widthClass: "w-5/12",
+      borderColor: "border-teal-400",
+   };
 </script>
 
 <!-- Hero Section -->
@@ -8,7 +34,7 @@
    <div class="hero-overlay bg-opacity-60"></div>
    <div class="hero-content text-left text-neutral-content ml-12">
       <div class="max-w-md text-base-100">
-         <p class="mb-5">Online Private Tutoring</p>
+         <p class="text-black mb-5 bg-blue-200 rounded-md px-4 w-max">Online Private Tutoring</p>
          <h1 class="mb-5 text-5xl font-bold">
             Find the perfect tutor for <TypingEffect />
          </h1>
@@ -29,11 +55,15 @@
 <div class="separator-bottom"></div>
 
 <!-- General Content -->
-<div class="bg-secondary">PLACEHOLDER</div>
+<div class="flex flex-col justify-center items-center mt-14 mb-32">
+   <InfoCard props={infoCard1} />
+   <div class="mb-32" />
+   <InfoCard props={infoCard2} />
+</div>
 
 <style>
    #hero-head {
-      background-image: url("hero-image.jpeg");
+      background-image: url("hero-image.png");
       background-size: center;
       background-position: center;
       background-repeat: no-repeat;
