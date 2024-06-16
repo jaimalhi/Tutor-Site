@@ -35,12 +35,14 @@
             <li><a href="/how-it-works">How it works</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <hr />
-            <li><a href="/login">Login</a></li>
-            <li><a href={calendlyLink} target="_blank">FREE Consultation</a></li>
+            <!-- <li><a href="/login" class="text-primary">Login</a></li> -->
+            <li>
+               <a href={calendlyLink} target="_blank" class="text-primary">FREE Consultation</a>
+            </li>
          </ul>
       </div>
       <div class="hidden lg:flex">
-         <a href="/login" class="btn btn-outline text-base-100 mr-4 px-6">Login</a>
+         <!-- <a href="/login" class="btn btn-outline text-base-100 mr-4 px-6">Login</a> -->
          <a href={calendlyLink} target="_blank" class="btn btn-primary text-base-100 mr-4"
             >Book a FREE Consultation</a>
       </div>

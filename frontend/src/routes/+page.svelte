@@ -47,7 +47,7 @@
 
 <!-- Subject Display -->
 <div class="separator-top"></div>
-<div class="mx-1" style="background-color: #ebebeb;">
+<div class="mx-1" style="background-color: #ebebeb; width: 100vw">
    <p class="text-center text-primary font-semibold mb-1">Subjects</p>
    <h1 class="text-center text-3xl md:text-4xl font-bold mb-4">
       Specialized education in a variety of subjects

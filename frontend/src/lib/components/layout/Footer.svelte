@@ -6,7 +6,7 @@
       <h6 class="footer-title">About Us</h6>
       <a href="/legal/terms-of-service" class="link link-hover">Terms of Service</a>
       <a href="/legal/privacy-policy" class="link link-hover">Privacy Policy</a>
-      <a href="/careers/become-tutor" class="link link-hover">Become a Tutor</a>
+      <a href="/careers/become-a-tutor" class="link link-hover">Become a Tutor</a>
    </nav>
    <nav>
       <h6 class="footer-title">Contact</h6>
