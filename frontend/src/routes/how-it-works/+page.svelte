@@ -26,7 +26,7 @@
    };
 
    let htmlString2: string = `
-   <p class="mb-2">USING A SCIENTIFICALLY-PROVEN LESSON FRAMEWORK</p>
+   <p class="mb-2">USING A PROVEN LESSON FRAMEWORK</p>
    <ol class="list-decimal ml-5">
        <li>Student Check-in and Introduction </li>
        <li>Learning and Consolidation</li>
@@ -111,12 +111,14 @@
    .separator-top {
       width: 0;
       height: 0;
+      margin-bottom: -1px;
       border-right: 100vw solid transparent;
       border-bottom: 5vw solid #31a9bf;
    }
    .separator-bottom {
       width: 0;
       height: 0;
+      margin-top: -1px;
       border-left: 100vw solid transparent;
       border-top: 5vw solid #31a9bf;
    }

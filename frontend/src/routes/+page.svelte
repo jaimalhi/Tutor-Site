@@ -40,7 +40,7 @@
          <h1 class="mb-5 text-5xl font-bold">
             Find the perfect tutor for <TypingEffect />
          </h1>
-         <a href="/login" class="btn btn-primary px-6 text-base-100">Get Started &#10142;</a>
+         <a href="/how-it-works" class="btn btn-primary px-6 text-base-100">Get Started &#10142;</a>
       </div>
    </div>
 </div>
@@ -68,7 +68,7 @@
 
 <style>
    #hero-head {
-      background-image: url("hero-image.png");
+      background-image: url("/hero-image.png");
       background-size: center;
       background-position: center;
       background-repeat: no-repeat;
