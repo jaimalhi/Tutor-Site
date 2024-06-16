@@ -1,6 +1,7 @@
 <script lang="ts">
    import InfoCard from "$lib/components/utils/InfoCard.svelte";
    import type { InfoCardProps } from "$lib/components/utils/infoCard.ts";
+   import { calendlyLink } from "$lib/config/links.js";
 
    let htmlString1: string = `
    <ul class="list-disc ml-5">
@@ -86,7 +87,7 @@
          <p>Start lessons with your tutor, following a personalized learning program!</p>
       </li>
    </ul>
-   <a href="/" class="btn btn-accent px-8">Book a FREE Consultation</a>
+   <a href={calendlyLink} target="_blank" class="btn btn-accent px-8">Book a FREE Consultation</a>
 </div>
 <div class="separator-bottom mb-8"></div>
 

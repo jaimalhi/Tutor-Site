@@ -1,5 +1,5 @@
 <script>
-   const calendlyLink = "https://calendly.com/";
+   import { calendlyLink } from "$lib/config/links.js";
 </script>
 
 <div class="navbar absolute bg-neutral-content md:bg-transparent z-10">
