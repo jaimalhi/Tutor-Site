@@ -19,8 +19,8 @@
          <ul
             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
             <li><a href="/">Home</a></li>
-            <li><a href="/">How it works</a></li>
-            <li><a href="/">Contact Us</a></li>
+            <li><a href="/how-it-works">How it works</a></li>
+            <li><a href="/contact">Contact Us</a></li>
          </ul>
       </div>
       <a href="/" class="ml-10"
@@ -29,8 +29,8 @@
    <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 font-semibold text-base-100">
          <li><a href="/">Home</a></li>
-         <li><a href="/">How it works</a></li>
-         <li><a href="/">Contact Us</a></li>
+         <li><a href="/how-it-works">How it works</a></li>
+         <li><a href="/contact">Contact Us</a></li>
       </ul>
    </div>
    <div class="navbar-end">

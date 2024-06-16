@@ -1,7 +1,7 @@
 export interface InfoCardProps {
    heading: string;
    description: string;
-   linkText: string;
+   linkText: string | null;
    src: string;
    alt: string;
    textOffset: string;
