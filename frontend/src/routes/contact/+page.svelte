@@ -6,7 +6,7 @@
 <div
    class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen">
    <div class="w-3/4 md:w-1/2">
-      <h1 class="text-primary text-6xl font-semibold mb-4">Contact Us</h1>
+      <h1 class="text-primary text-5xl md:text-6xl font-semibold mb-4">Contact Us</h1>
       <p class="mb-4">
          Got questions or need assistance? We're here to help! Reach out to us using the form below,
          and our support team will respond within 24 hours.
