@@ -1,6 +1,6 @@
 <script></script>
 
-<div class="navbar fixed bg-neutral-content md:bg-transparent z-10">
+<div class="navbar absolute bg-neutral-content md:bg-transparent z-10">
    <div class="navbar-start mt-1">
       <a href="/" class="flex justify-end"
          ><img src="/avio-light.png" width="128px" alt="avio-tutor-logo" /></a>

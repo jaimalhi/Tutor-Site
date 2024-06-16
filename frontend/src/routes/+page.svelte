@@ -57,7 +57,10 @@
 <!-- General Content -->
 <div class="flex flex-col justify-center items-center mt-14 mb-32">
    <InfoCard props={infoCard1} />
-   <div class="mb-32" />
+   <div class="md:mb-32" />
+
+   <hr class="flex w-10/12 border-t-2 border-pink-300 my-12 md:hidden" />
+
    <InfoCard props={infoCard2} />
 </div>
 
