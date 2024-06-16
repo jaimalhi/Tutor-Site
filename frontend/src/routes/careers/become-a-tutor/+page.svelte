@@ -1,0 +1,105 @@
+<script lang="ts">
+   // ...
+</script>
+
+<!-- Contact Form -->
+<div
+   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-10 pt-6 md:pt-28">
+   <div class="w-3/4 md:w-1/2">
+      <h1 class="text-primary text-5xl md:text-6xl font-semibold mb-4">Become a Tutor</h1>
+      <p class="mb-4">
+         Thank you for your interest in joining our team at Avio Tutor! Please fill out the form
+         below as your application to become a tutor with us. We will review your application and
+         get back to you within 3-5 business days.
+      </p>
+      <form class="space-y-2">
+         <div class="flex space-x-3">
+            <label class="form-control w-1/2">
+               <div class="label">
+                  <span class="label-text text-primary">First Name</span>
+               </div>
+               <input type="text" placeholder="Jane" class="input input-ghost w-full" required />
+            </label>
+            <label class="form-control w-1/2">
+               <div class="label">
+                  <span class="label-text text-primary">Last Name</span>
+               </div>
+               <input type="text" placeholder="Doe" class="input input-ghost w-full" required />
+            </label>
+         </div>
+         <label class="form-control w-full">
+            <div class="label">
+               <span class="label-text text-primary">Email</span>
+            </div>
+            <input
+               type="email"
+               placeholder="janedoe@example.com"
+               class="input input-ghost w-full"
+               required />
+         </label>
+         <label class="form-control w-full">
+            <div class="label">
+               <span class="label-text text-primary">Highest level of education</span>
+            </div>
+            <input
+               type="text"
+               placeholder="Bachelors Degree, Masters Degree, Doctorate, etc."
+               class="input input-ghost w-full"
+               required />
+         </label>
+         <label class="form-control max-h-48">
+            <div class="label">
+               <span class="label-text text-primary">Describe the focus of your studies</span>
+            </div>
+            <textarea
+               class="textarea textarea-ghost h-24"
+               placeholder="e.g. Computer Science, Mathematics, etc."
+               required></textarea>
+         </label>
+         <label class="form-control max-h-48">
+            <div class="label">
+               <span class="label-text text-primary"
+                  >Describe your tutoring or relevant experience(s)</span>
+            </div>
+            <textarea
+               class="textarea textarea-ghost h-24"
+               placeholder="What would make you a good tutor..."
+               required></textarea>
+         </label>
+         <label class="form-control w-full">
+            <div class="label">
+               <span class="label-text text-primary">What subjects would you like to tutor?</span>
+            </div>
+            <input
+               type="text"
+               placeholder="Math, Science, English, etc."
+               class="input input-ghost w-full"
+               required />
+         </label>
+         <label class="form-control w-full">
+            <div class="label">
+               <span class="label-text text-primary">How did you hear about us?</span>
+            </div>
+            <input
+               type="text"
+               placeholder="Google search, referral, etc."
+               class="input input-ghost w-full"
+               required />
+         </label>
+         <!-- RESUME UPLOAD -->
+         <label class="form-control w-full max-w-xs">
+            <div class="label">
+               <span class="label-text text-primary">Upload your Resume/CV</span>
+            </div>
+            <input
+               type="file"
+               class="file-input file-input-ghost w-full"
+               required
+               accept=".pdf,.docx,application/pdf" />
+         </label>
+         <label class="form-control items-center">
+            <button type="submit" class="btn btn-primary w-1/2 mt-4">Submit Application</button>
+         </label>
+      </form>
+   </div>
+</div>
