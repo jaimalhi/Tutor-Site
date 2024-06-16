@@ -91,7 +91,11 @@
             <div class="label">
                <span class="label-text text-primary">Upload your Resume/CV</span>
             </div>
-            <input type="file" class="file-input file-input-ghost w-full" required />
+            <input
+               type="file"
+               class="file-input file-input-ghost w-full"
+               required
+               accept=".pdf,.docx,application/pdf" />
          </label>
          <label class="form-control items-center">
             <button type="submit" class="btn btn-primary w-1/2 mt-4">Submit Application</button>
