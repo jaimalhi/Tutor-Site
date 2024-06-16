@@ -9,8 +9,9 @@
       description:
          "Following a thorough review of your performance, objectives, and curriculum in our complimentary Zoom consultation, we develop a personalized lesson plan that aligns with your learning approach and timetable.",
       linkText: "See how it works",
-      src: "laptop.png",
-      alt: "laptop on desk",
+      linkHref: "/how-it-works",
+      src: "/general/studying.jpg",
+      alt: "woman studying on a desk with a laptop and books",
       textOffset: "left",
       widthClass: "w-5/12",
       borderColor: "border-yellow-400",
@@ -21,8 +22,9 @@
       description:
          "Our experienced tutors, who are graduates of top universities, are  experts in their respective fields and able to teach at all levels. They are not only intellectually adept but also compassionate and captivating in their teaching approach.",
       linkText: "Contact Us",
-      src: "laptop.png",
-      alt: "laptop on desk",
+      linkHref: "/contact",
+      src: "/general/grad-cap.jpg",
+      alt: "women in graduation cap and gown",
       textOffset: "right",
       widthClass: "w-5/12",
       borderColor: "border-teal-400",
@@ -38,7 +40,7 @@
          <h1 class="mb-5 text-5xl font-bold">
             Find the perfect tutor for <TypingEffect />
          </h1>
-         <button class="btn btn-primary px-6 text-base-100">Get Started &#10142;</button>
+         <a href="/login" class="btn btn-primary px-6 text-base-100">Get Started &#10142;</a>
       </div>
    </div>
 </div>

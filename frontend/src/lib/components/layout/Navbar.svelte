@@ -1,9 +1,11 @@
-<script></script>
+<script>
+   const calendlyLink = "https://calendly.com/";
+</script>
 
 <div class="navbar absolute bg-neutral-content md:bg-transparent z-10">
    <div class="navbar-start mt-1">
       <a href="/" class="flex justify-end"
-         ><img src="/avio-light.png" width="128px" alt="avio-tutor-logo" /></a>
+         ><img src="/logos/avio-light.png" width="128px" alt="avio-tutor-logo" /></a>
    </div>
    <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 font-semibold text-base-100">
@@ -33,13 +35,14 @@
             <li><a href="/how-it-works">How it works</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <hr />
-            <li><a href="/">Login</a></li>
-            <li><a href="/">FREE Consultation</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href={calendlyLink} target="_blank">FREE Consultation</a></li>
          </ul>
       </div>
       <div class="hidden lg:flex">
-         <a href="/" class="btn btn-outline text-base-100 mr-4 px-6">Login</a>
-         <a href="/" class="btn btn-primary text-base-100 mr-4">Book a FREE Consultation</a>
+         <a href="/login" class="btn btn-outline text-base-100 mr-4 px-6">Login</a>
+         <a href={calendlyLink} target="_blank" class="btn btn-primary text-base-100 mr-4"
+            >Book a FREE Consultation</a>
       </div>
    </div>
 </div>

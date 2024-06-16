@@ -17,13 +17,13 @@
                <div class="label">
                   <span class="label-text text-primary">First Name</span>
                </div>
-               <input type="text" placeholder="Jane" class="input input-ghost w-full" />
+               <input type="text" placeholder="Jane" class="input input-ghost w-full" required />
             </label>
             <label class="form-control w-1/2">
                <div class="label">
                   <span class="label-text text-primary">Last Name</span>
                </div>
-               <input type="text" placeholder="Doe" class="input input-ghost w-full" />
+               <input type="text" placeholder="Doe" class="input input-ghost w-full" required />
             </label>
          </div>
          <label class="form-control w-full">
@@ -33,14 +33,17 @@
             <input
                type="email"
                placeholder="janedoe@example.com"
-               class="input input-ghost w-full" />
+               class="input input-ghost w-full"
+               required />
          </label>
          <label class="form-control max-h-48">
             <div class="label">
                <span class="label-text text-primary">Message</span>
             </div>
-            <textarea class="textarea textarea-ghost h-24" placeholder="Math tutor required..."
-            ></textarea>
+            <textarea
+               class="textarea textarea-ghost h-24"
+               placeholder="Math tutor required..."
+               required></textarea>
          </label>
          <label class="form-control items-center">
             <button type="submit" class="btn btn-primary w-1/2 mt-4">Send Message</button>

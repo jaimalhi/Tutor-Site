@@ -21,7 +21,7 @@
       <p class="mb-6">{@html props.description}</p>
       {#if props.linkText !== null}
          <a
-            href="/"
+            href={props.linkHref ? props.linkHref : "/"}
             class="w-11/12 text-2xl flex justify-between border-b-2 border-black hover:text-secondary hover:border-b-secondary">
             <p>{props.linkText}</p>
             <p>&#10142;</p>

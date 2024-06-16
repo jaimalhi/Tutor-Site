@@ -1,20 +1,24 @@
 <footer class="footer p-10 bg-neutral text-base-100">
    <aside>
-      <img src="/avio-light.png" width="128px" alt="avio-tutor-logo" />
+      <img src="/logos/avio-light.png" width="128px" alt="avio-tutor-logo" />
    </aside>
    <nav>
       <h6 class="footer-title">About Us</h6>
-      <a href="/" class="link link-hover">Terms of Service</a>
-      <a href="/" class="link link-hover">Privacy Policy</a>
-      <a href="/" class="link link-hover">Become a Tutor</a>
+      <a href="/legal/terms-of-service" class="link link-hover">Terms of Service</a>
+      <a href="/legal/privacy-policy" class="link link-hover">Privacy Policy</a>
+      <a href="/careers/become-tutor" class="link link-hover">Become a Tutor</a>
    </nav>
    <nav>
       <h6 class="footer-title">Contact</h6>
-      <a class="link link-hover" id="icons">
+      <a
+         class="link link-hover"
+         id="icons"
+         data-auto-recognition="true"
+         href="mailto:aviotutor@gmail.com">
          <img src="/icons/mail.png" alt="email-icon" />
          aviotutor@gmail.com
       </a>
-      <a class="link link-hover" id="icons">
+      <a class="link link-hover" id="icons" href="tel:+17789890044">
          <img src="/icons/telephone.png" alt="email-icon" />
          +1 778 989 0044
       </a>
