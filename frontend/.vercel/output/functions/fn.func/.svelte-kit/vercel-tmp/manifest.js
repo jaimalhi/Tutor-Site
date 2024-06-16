@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.png","general/classroom.jpg","general/grad-cap.jpg","general/laptop.jpg","general/social.jpg","general/studying.jpg","hero-image.png","icons/attributions.txt","icons/biology.png","icons/chem.png","icons/coding.png","icons/earth-sci.png","icons/english.png","icons/history.png","icons/mail.png","icons/math.png","icons/physics.png","icons/telephone.png","logos/avio-dark.png","logos/avio-light.png"]),
-	mimeTypes: {".png":"image/png",".jpg":"image/jpeg",".txt":"text/plain"},
+	assets: new Set(["aviotutor-favicon.ico","favicon.ico","general/classroom.jpg","general/grad-cap.jpg","general/laptop.jpg","general/social.jpg","general/studying.jpg","hero-image.png","icons/attributions.txt","icons/biology.png","icons/chem.png","icons/coding.png","icons/earth-sci.png","icons/english.png","icons/history.png","icons/mail.png","icons/math.png","icons/physics.png","icons/telephone.png","logos/avio-dark.png","logos/avio-light.png"]),
+	mimeTypes: {".jpg":"image/jpeg",".png":"image/png",".txt":"text/plain"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.D5ob9I6z.js","app":"_app/immutable/entry/app.q3XB-VS3.js","imports":["_app/immutable/entry/start.D5ob9I6z.js","_app/immutable/chunks/entry.C955sR5m.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/entry/app.q3XB-VS3.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/chunks/index.COvcv-U1.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.CqQfWnpy.js","app":"_app/immutable/entry/app.DJqoj199.js","imports":["_app/immutable/entry/start.CqQfWnpy.js","_app/immutable/chunks/entry.DOJrz-YY.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/entry/app.DJqoj199.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/chunks/index.COvcv-U1.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
