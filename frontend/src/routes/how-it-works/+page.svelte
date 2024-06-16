@@ -82,10 +82,10 @@
    </ul>
    <a href="/" class="btn btn-accent px-8">Book a FREE Consultation</a>
 </div>
-<div class="separator-bottom"></div>
+<div class="separator-bottom mb-8"></div>
 
 <!-- Info Card 2 -->
-<div class="flex justify-center items-baseline mb-12">
+<div class="flex justify-center items-baseline mb-20">
    <InfoCard props={infoCard2} />
 </div>
 
