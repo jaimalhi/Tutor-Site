@@ -15,3 +15,5 @@
 <a href="https://www.flaticon.com/free-icons/science" title="science icons">Science icons created by Good Ware - Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/geology" title="geology icons">Geology icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Icongeek26 - Flaticon</a>

@@ -4,7 +4,7 @@
 
 <!-- Contact Form -->
 <div
-   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen">
+   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-6">
    <div class="w-3/4 md:w-1/2">
       <h1 class="text-primary text-5xl md:text-6xl font-semibold mb-4">Contact Us</h1>
       <p class="mb-4">
@@ -43,7 +43,7 @@
             ></textarea>
          </label>
          <label class="form-control items-center">
-            <button type="submit" class="btn btn-primary w-1/2 mt-4">Submit</button>
+            <button type="submit" class="btn btn-primary w-1/2 mt-4">Send Message</button>
          </label>
       </form>
    </div>

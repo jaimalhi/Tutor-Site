@@ -1,63 +1,68 @@
-<script>
-   import { onMount } from "svelte";
-
+<script lang="ts">
    let subjects = [
       { name: "Math", icon: "/icons/math.png", color: "bg-blue-100" },
       { name: "English", icon: "/icons/english.png", color: "bg-pink-100" },
       { name: "History", icon: "/icons/history.png", color: "bg-yellow-100" },
       { name: "Chemistry", icon: "/icons/chem.png", color: "bg-blue-200" },
       { name: "Biology", icon: "/icons/biology.png", color: "bg-green-100" },
-      { name: "Physics", icon: "/icons/physics.png", color: "bg-orange-100" },
-      { name: "Earth Science", icon: "/icons/earth-sci.png", color: "bg-orange-300" },
+      { name: "Physics", icon: "/icons/physics.png", color: "bg-red-100" },
+      { name: "Earth Science", icon: "/icons/earth-sci.png", color: "bg-orange-200" },
+      { name: "Programming", icon: "/icons/coding.png", color: "bg-purple-200" },
    ];
 
-   let currentScroll = 0;
-   let scrollSpeed = 0.5; // Adjust the speed by changing this value
-   let itemWidth = 300; // Adjust based on your item width
-
-   onMount(() => {
-      startScrolling();
-   });
-
-   function startScrolling() {
-      const scroll = () => {
-         currentScroll -= scrollSpeed;
-         if (Math.abs(currentScroll) >= subjects.length * itemWidth) {
-            currentScroll = 0;
-         }
-         requestAnimationFrame(scroll);
-      };
-      scroll();
-   }
+   // Create a duplicated array for seamless wrapping
+   let duplicatedSubjects = [...subjects, ...subjects];
 </script>
 
-<div class="carousel-container" style="transform: translateX({currentScroll}px);">
-   {#each subjects as subject}
-      <div class={`carousel-item card ${subject.color} p-5 m-2 shadow-md`}>
-         <div class="card-body items-center text-center">
-            <img src={subject.icon} alt={subject.name} width="64px" class="mb-2" />
-            <h2 class="card-title">{subject.name}</h2>
+<div class="carousel">
+   <div class="carousel-track">
+      {#each duplicatedSubjects as subject}
+         <div class={`carousel-item card ${subject.color} p-5 m-2 shadow-md w-32 md:w-48`}>
+            <div class="card-body justify-center items-center text-center">
+               <img src={subject.icon} alt={subject.name} class="md:mb-2 max-w-12 md:max-w-16" />
+               <h2 class="card-title text-base md:text-xl">{subject.name}</h2>
+            </div>
          </div>
-      </div>
-   {/each}
-   {#each subjects as subject}
-      <!-- Duplicate items for seamless scrolling -->
-      <div class={`carousel-item card ${subject.color} p-5 m-2 shadow-md`}>
-         <div class="card-body items-center text-center">
-            <img src={subject.icon} alt={subject.name} width="64px" class="mb-2" />
-            <h2 class="card-title">{subject.name}</h2>
-         </div>
-      </div>
-   {/each}
+      {/each}
+   </div>
 </div>
 
 <style>
-   .carousel-container {
-      width: 100%;
+   .carousel {
       display: flex;
-      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
    }
-   .carousel-item {
-      width: calc(15% - 1rem);
+
+   .carousel-track {
+      display: flex;
+      width: calc(14 * 100% / 8); /* accommodate the duplicated items */
+      animation: scroll 20s linear infinite; /* default for larger screens */
+   }
+
+   @keyframes scroll {
+      0% {
+         transform: translateX(0);
+      }
+      100% {
+         transform: translateX(-60%);
+      }
+   }
+
+   /* Adjust animation speed for mobile */
+   @media (max-width: 768px) {
+      .carousel-track {
+         animation: scrollMobile 20s linear infinite;
+      }
+   }
+
+   @keyframes scrollMobile {
+      0% {
+         transform: translateX(0);
+      }
+      100% {
+         transform: translateX(-200%);
+      }
    }
 </style>
