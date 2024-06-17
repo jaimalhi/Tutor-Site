@@ -7,15 +7,15 @@
    let rotationClass = "";
 
    if (props.textOffset === "right") {
-      offsetSettings = "lg:flex-row-reverse -space-x-16";
+      offsetSettings = "lg:flex-row-reverse lg:-ml-36";
       rotationClass = "rotate-3 translate-x-3";
    } else if (props.textOffset === "left") {
-      offsetSettings = "space-x-16";
+      offsetSettings = "";
       rotationClass = "-rotate-3 -translate-x-3";
    }
 </script>
 
-<div class="flex justify-center items-center w-8/12 {offsetSettings}">
+<div class="flex justify-start items-center w-8/12 {offsetSettings}">
    <aside class="lg:w-5/12">
       <h1 class="text-4xl lg:5xl font-semibold text-primary mb-6">{props.heading}</h1>
       <p class="mb-6">{@html props.description}</p>
@@ -28,7 +28,7 @@
          </a>
       {/if}
    </aside>
-   <div class="mx-auto {props.widthClass} min-w-64 hidden lg:flex">
+   <div class="mx-auto {props.widthClass} hidden lg:flex">
       <div class="p-4 shadow-lg {props.borderColor} custom-border">
          <img src={props.src} alt={props.alt} class="w-full rounded-lg {rotationClass}" />
       </div>

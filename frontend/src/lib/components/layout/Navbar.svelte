@@ -30,14 +30,25 @@
                   d="M4 6h16M4 12h8m-8 6h16" /></svg>
          </div>
          <ul
-            class="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
-            <li><a href="/">Home</a></li>
-            <li><a href="/how-it-works">How it works</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            class="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52 font-semibold"
+            id="nav-dropdown">
+            <li><a href="/" on:click={() => (window.location.href = "/")}>Home</a></li>
+            <li>
+               <a href="/how-it-works" on:click={() => (window.location.href = "how-it-works")}
+                  >How it works</a>
+            </li>
+            <li>
+               <a href="/contact" on:click={() => (window.location.href = "/contact")}
+                  >Contact Us</a>
+            </li>
             <hr />
             <!-- <li><a href="/login" class="text-primary">Login</a></li> -->
             <li>
-               <a href={calendlyLink} target="_blank" class="text-primary">FREE Consultation</a>
+               <a
+                  href={calendlyLink}
+                  target="_blank"
+                  class="text-primary"
+                  on:click={() => (window.location.href = calendlyLink)}>FREE Consultation</a>
             </li>
          </ul>
       </div>
@@ -51,7 +62,7 @@
 
 <style>
    /* Handle touch events explicitly */
-   .dropdown-content li a {
+   #nav-dropdown li a {
       touch-action: manipulation;
    }
 </style>
