@@ -8,3 +8,15 @@ body {
    padding: 0;
    overflow-x: hidden;
 }
+
+.dropdown,
+.dropdown-content,
+.dropdown .dropdown-content,
+.dropdown.dropdown-open .dropdown-content,
+.dropdown.dropdown-hover:hover .dropdown-content,
+.dropdown:not(.dropdown-hover):focus .dropdown-content,
+.dropdown:not(.dropdown-hover):focus-within .dropdown-content {
+   pointer-events: auto;
+   visibility: visible;
+   opacity: 1;
+}

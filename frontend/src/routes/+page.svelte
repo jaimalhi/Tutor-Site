@@ -8,7 +8,7 @@
       heading: "Personalized 1-on-1 Lessons",
       description:
          "Following a thorough review of your performance, objectives, and curriculum in our complimentary Zoom consultation, we develop a personalized lesson plan that aligns with your learning approach and timetable.",
-      linkText: "See how it works",
+      linkText: "How it Works",
       linkHref: "/how-it-works",
       src: "/general/studying.jpg",
       alt: "woman studying on a desk with a laptop and books",
@@ -47,10 +47,9 @@
 
 <!-- Subject Display -->
 <div class="separator-top"></div>
-<div class="mx-1" style="background-color: #ebebeb; width: 100vw">
-   <p class="text-center text-primary font-semibold mb-1">Subjects</p>
+<div style="background-color: #ebebeb; width: 100vw">
    <h1 class="text-center text-3xl lg:text-4xl font-bold mb-4">
-      Specialized education in a variety of subjects
+      Specialized Education in a Variety of Subjects
    </h1>
    <Carousel />
 </div>
@@ -77,13 +76,15 @@
    .separator-top {
       width: 0;
       height: 0;
-      border-left: 100vw solid transparent;
+      margin: 0;
+      border-left: 101vw solid transparent;
       border-bottom: 5vw solid #ebebeb;
    }
    .separator-bottom {
       width: 0;
       height: 0;
-      border-right: 100vw solid transparent;
+      margin: 0;
+      border-right: 101vw solid transparent;
       border-top: 5vw solid #ebebeb;
    }
 </style>
