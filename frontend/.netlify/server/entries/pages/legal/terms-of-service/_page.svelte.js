@@ -1,6 +1,6 @@
 import { c as create_ssr_component } from "../../../../chunks/ssr.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return ` <div class="flex justify-center items-center text-base-100 bg-neutral-content h-64 mb-6" data-svelte-h="svelte-18p8lkk"><h1 class="text-5xl md:text-6xl text-center mt-12">Terms of Service</h1></div> <div class="w-full flex justify-center items-center" data-svelte-h="svelte-16t18h9"><article class="w-3/4"><section class="mb-4"><h3 class="text-xl font-semibold">Introduction</h3> <p>Welcome to Avio Tutor. These Terms and Conditions govern your use of our website and
+  return ` <div class="flex justify-center items-center text-base-100 bg-neutral-content h-64 mb-6" data-svelte-h="svelte-10hq8iu"><h1 class="text-5xl md:text-6xl text-center mt-12 mx-2">Terms of Service</h1></div> <div class="w-full flex justify-center items-center" data-svelte-h="svelte-16t18h9"><article class="w-3/4"><section class="mb-4"><h3 class="text-xl font-semibold">Introduction</h3> <p>Welcome to Avio Tutor. These Terms and Conditions govern your use of our website and
             services. By accessing or using our services, you agree to comply with and be bound by
             these Terms and Conditions.</p></section> <section class="mb-4"><h3 class="text-xl font-semibold">Services</h3> <p>Avio Tutor, operated by Arc Academic Inc., provides online tutoring services through
             Zoom. All lessons will be recorded and uploaded to the cloud for later access by
