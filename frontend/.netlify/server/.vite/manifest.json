@@ -68,7 +68,7 @@
       "_links.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Dc0fjePx.css"
+      "_app/immutable/assets/_layout.C-jqjP9I.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -81,7 +81,7 @@
       "_InfoCard.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.fTMNObC0.css"
+      "_app/immutable/assets/_page.Dhk2t1BB.css"
     ]
   },
   "src/routes/careers/become-a-tutor/+page.svelte": {

@@ -47,7 +47,7 @@
 
 <!-- Subject Display -->
 <div class="separator-top"></div>
-<div class="mx-1" style="background-color: #ebebeb; width: 100vw">
+<div style="background-color: #ebebeb; width: 100vw">
    <h1 class="text-center text-3xl lg:text-4xl font-bold mb-4">
       Specialized Education in a Variety of Subjects
    </h1>
@@ -76,13 +76,15 @@
    .separator-top {
       width: 0;
       height: 0;
-      border-left: 100vw solid transparent;
+      margin: 0;
+      border-left: 101vw solid transparent;
       border-bottom: 5vw solid #ebebeb;
    }
    .separator-bottom {
       width: 0;
       height: 0;
-      border-right: 100vw solid transparent;
+      margin: 0;
+      border-right: 101vw solid transparent;
       border-top: 5vw solid #ebebeb;
    }
 </style>
