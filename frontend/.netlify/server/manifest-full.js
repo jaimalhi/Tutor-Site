@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["aviotutor-favicon.ico","favicon.ico","general/classroom.jpg","general/grad-cap.jpg","general/laptop.jpg","general/social.jpg","general/studying.jpg","hero-image.png","icons/attributions.txt","icons/biology.png","icons/chem.png","icons/coding.png","icons/earth-sci.png","icons/english.png","icons/history.png","icons/mail.png","icons/math.png","icons/physics.png","icons/telephone.png","logos/avio-dark.png","logos/avio-light.png"]),
+	assets: new Set(["aviotutor-favicon.ico","general/classroom.jpg","general/grad-cap.jpg","general/laptop.jpg","general/social.jpg","general/studying.jpg","hero-image.png","icons/attributions.txt","icons/biology.png","icons/chem.png","icons/coding.png","icons/earth-sci.png","icons/english.png","icons/history.png","icons/mail.png","icons/math.png","icons/physics.png","icons/telephone.png","logos/avio-dark.png","logos/avio-light.png"]),
 	mimeTypes: {".jpg":"image/jpeg",".png":"image/png",".txt":"text/plain"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.DIZO33DY.js","app":"_app/immutable/entry/app.Cq3HEE60.js","imports":["_app/immutable/entry/start.DIZO33DY.js","_app/immutable/chunks/entry.DKrPa35O.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/entry/app.Cq3HEE60.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/chunks/index.COvcv-U1.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.HxPwUBg6.js","app":"_app/immutable/entry/app.D8HrLEho.js","imports":["_app/immutable/entry/start.HxPwUBg6.js","_app/immutable/chunks/entry.CFiw7QZg.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/entry/app.D8HrLEho.js","_app/immutable/chunks/scheduler.C3YKdWzi.js","_app/immutable/chunks/index.COvcv-U1.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

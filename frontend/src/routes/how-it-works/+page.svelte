@@ -50,7 +50,7 @@
 
 <!-- Top Section -->
 <div class="flex justify-center items-center text-base-100 bg-neutral-content h-80 mb-20">
-   <h1 class="text-5xl lg:text-6xl text-center">
+   <h1 class="text-5xl lg:text-6xl text-center mx-2">
       HOW YOUR TUTORING WORKS <span class="text-primary">FOR YOU</span>
    </h1>
 </div>
