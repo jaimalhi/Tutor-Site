@@ -36,7 +36,7 @@
    `;
 
    const infoCard2: InfoCardProps = {
-      heading: "How your lessons work",
+      heading: "How your Lessons Work",
       description: htmlString2,
       linkText: null,
       linkHref: null,
@@ -51,12 +51,12 @@
 <!-- Top Section -->
 <div class="flex justify-center items-center text-base-100 bg-neutral-content h-80 mb-20">
    <h1 class="text-5xl lg:text-6xl text-center mx-2">
-      HOW YOUR TUTORING WORKS <span class="text-primary">FOR YOU</span>
+      HOW OUR TUTORING WORKS <span class="text-primary">FOR YOU</span>
    </h1>
 </div>
 
 <!-- Info Card 1 -->
-<div class="flex justify-center items-baseline mb-12">
+<div class="flex justify-center items-center mb-12">
    <InfoCard props={infoCard1} />
 </div>
 
@@ -92,7 +92,7 @@
 <div class="separator-bottom mb-8"></div>
 
 <!-- Info Card 2 -->
-<div class="flex justify-center items-baseline mb-20">
+<div class="flex justify-center items-center mb-20">
    <InfoCard props={infoCard2} />
 </div>
 

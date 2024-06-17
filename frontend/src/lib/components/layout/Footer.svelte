@@ -1,12 +1,17 @@
 <footer class="footer p-10 bg-neutral text-base-100">
-   <aside>
+   <a href="/">
       <img src="/logos/avio-light.png" width="128px" alt="avio-tutor-logo" />
-   </aside>
+   </a>
    <nav>
       <h6 class="footer-title">About Us</h6>
+      <a href="/how-it-works" class="link link-hover">How it Works</a>
+      <a href="/contact" class="link link-hover">Contact Us</a>
+      <a href="/careers/become-a-tutor" class="link link-hover">Become a Tutor</a>
+   </nav>
+   <nav>
+      <h6 class="footer-title">Legal</h6>
       <a href="/legal/terms-of-service" class="link link-hover">Terms of Service</a>
       <a href="/legal/privacy-policy" class="link link-hover">Privacy Policy</a>
-      <a href="/careers/become-a-tutor" class="link link-hover">Become a Tutor</a>
    </nav>
    <nav>
       <h6 class="footer-title">Contact</h6>

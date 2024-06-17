@@ -17,7 +17,7 @@
    <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 font-semibold text-base-100">
          <li><a href="/">Home</a></li>
-         <li><a href="/how-it-works">How it works</a></li>
+         <li><a href="/how-it-works">How it Works</a></li>
          <li><a href="/contact">Contact Us</a></li>
       </ul>
    </div>
@@ -37,26 +37,24 @@
                   d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
          </div>
-         {#if dropdownOpen}
-            <ul
-               class="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52 font-semibold"
-               id="nav-dropdown">
-               <li><a href="/">Home</a></li>
-               <li>
-                  <a href="/how-it-works">How it works</a>
-               </li>
-               <li>
-                  <a href="/contact">Contact Us</a>
-               </li>
-               <hr />
-               <!-- <li><a href="/login" class="text-primary">Login</a></li> -->
-               <li>
-                  <a href={calendlyLink} target="_blank" class="text-primary">
-                     FREE Consultation
-                  </a>
-               </li>
-            </ul>
-         {/if}
+         <ul
+            class="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52 font-semibold {dropdownOpen
+               ? 'dropdown-open'
+               : ''}"
+            id="nav-dropdown">
+            <li><a href="/">Home</a></li>
+            <li>
+               <a href="/how-it-works">How it Works</a>
+            </li>
+            <li>
+               <a href="/contact">Contact Us</a>
+            </li>
+            <hr />
+            <!-- <li><a href="/login" class="text-primary">Login</a></li> -->
+            <li>
+               <a href={calendlyLink} target="_blank" class="text-primary"> FREE Consultation </a>
+            </li>
+         </ul>
       </button>
       <div class="hidden lg:flex">
          <!-- <a href="/login" class="btn btn-outline text-base-100 mr-4 px-6">Login</a> -->

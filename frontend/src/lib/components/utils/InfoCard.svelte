@@ -15,7 +15,7 @@
    }
 </script>
 
-<div class="flex justify-start items-center w-8/12 {offsetSettings}">
+<div class="flex justify-center items-center w-8/12 {offsetSettings}">
    <aside class="lg:w-5/12">
       <h1 class="text-4xl lg:5xl font-semibold text-primary mb-6">{props.heading}</h1>
       <p class="mb-6">{@html props.description}</p>
