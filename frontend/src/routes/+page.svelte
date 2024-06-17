@@ -49,7 +49,7 @@
 <div class="separator-top"></div>
 <div class="mx-1" style="background-color: #ebebeb; width: 100vw">
    <p class="text-center text-primary font-semibold mb-1">Subjects</p>
-   <h1 class="text-center text-3xl md:text-4xl font-bold mb-4">
+   <h1 class="text-center text-3xl lg:text-4xl font-bold mb-4">
       Specialized education in a variety of subjects
    </h1>
    <Carousel />
@@ -59,9 +59,9 @@
 <!-- General Content -->
 <div class="flex flex-col justify-center items-center mt-14 mb-32">
    <InfoCard props={infoCard1} />
-   <div class="md:mb-32" />
+   <div class="lg:mb-32" />
 
-   <hr class="flex w-10/12 border-t-2 border-pink-300 my-12 md:hidden" />
+   <hr class="flex w-10/12 border-t-2 border-pink-300 my-12 lg:hidden" />
 
    <InfoCard props={infoCard2} />
 </div>

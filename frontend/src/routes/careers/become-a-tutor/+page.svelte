@@ -5,8 +5,8 @@
 <!-- Contact Form -->
 <div
    class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-10 pt-6 md:pt-28">
-   <div class="w-3/4 md:w-1/2">
-      <h1 class="text-primary text-5xl md:text-6xl font-semibold mb-4">Become a Tutor</h1>
+   <div class="w-3/4 lg:w-1/2">
+      <h1 class="text-primary text-5xl lg:text-6xl font-semibold mb-4">Become a Tutor</h1>
       <p class="mb-4">
          Thank you for your interest in joining our team at Avio Tutor! Please fill out the form
          below as your application to become a tutor with us. We will review your application and

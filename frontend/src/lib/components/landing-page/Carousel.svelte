@@ -17,10 +17,10 @@
 <div class="carousel">
    <div class="carousel-track">
       {#each duplicatedSubjects as subject}
-         <div class={`carousel-item card ${subject.color} p-5 m-2 shadow-md w-32 md:w-48`}>
+         <div class={`carousel-item card ${subject.color} p-5 m-2 shadow-md w-32 lg:w-48`}>
             <div class="card-body justify-center items-center text-center">
-               <img src={subject.icon} alt={subject.name} class="md:mb-2 max-w-12 md:max-w-16" />
-               <h2 class="card-title text-base md:text-xl">{subject.name}</h2>
+               <img src={subject.icon} alt={subject.name} class="lg:mb-2 max-w-12 lg:max-w-16" />
+               <h2 class="card-title text-base lg:text-xl">{subject.name}</h2>
             </div>
          </div>
       {/each}

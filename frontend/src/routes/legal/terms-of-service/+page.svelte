@@ -4,7 +4,7 @@
 
 <!-- Top Section -->
 <div class="flex justify-center items-center text-base-100 bg-neutral-content h-64 mb-6">
-   <h1 class="text-5xl md:text-6xl text-center mt-12">Terms of Service</h1>
+   <h1 class="text-5xl md:text-6xl text-center mt-12 mx-2">Terms of Service</h1>
 </div>
 
 <div class="w-full flex justify-center items-center">
