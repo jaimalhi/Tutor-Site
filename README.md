@@ -2,7 +2,7 @@
 **italics = to be determined**
 
 ### Backend
-- *NodeJS (via Bun or Express)* 
+- [Express](https://expressjs.com/) with [Bun](https://bun.sh/docs/api/http)
 
 ### Frontend
 - [Sveltekit](https://kit.svelte.dev/docs)
