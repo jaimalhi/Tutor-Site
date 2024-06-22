@@ -1,8 +1,7 @@
 import { z } from "zod";
 import { zod } from "sveltekit-superforms/adapters";
 import { superValidate } from "sveltekit-superforms/server";
-import { message, setError } from "sveltekit-superforms";
-import { fail } from "@sveltejs/kit";
+import { message, setError, fail } from "sveltekit-superforms";
 import type { Actions } from "./$types.ts";
 import { sendMail } from "$lib/mail/sendMail.js";
 
@@ -26,7 +25,7 @@ const contactSchema = z
 export const actions = {
    default: async ({ request }) => {
       const form = await superValidate(request, zod(contactSchema));
-      console.log(form);
+      //   console.log(form);
 
       if (!form.valid) {
          return fail(400, { form });
@@ -34,8 +33,11 @@ export const actions = {
 
       // send contact info and request to avio email
       const subjectLine = `Contact Form Submission: ${form.data.firstName} ${form.data.lastName}`;
+      const textBody = form.data.message;
+      const htmlBody = `<p>${form.data.message}</p>`;
+
       try {
-         const response = await sendMail(form.data.email, subjectLine, form.data.message);
+         const response = await sendMail(form.data.email, subjectLine, textBody, htmlBody);
          console.log("Response: " + response);
       } catch (error) {
          console.error("Error: " + error);

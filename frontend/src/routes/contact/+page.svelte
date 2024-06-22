@@ -2,45 +2,19 @@
    import { superForm } from "sveltekit-superforms";
    import type { PageData } from "./$types.ts";
    export let data: PageData;
+   import Toast from "$lib/components/utils/Toast.svelte";
    import SuperDebug from "sveltekit-superforms";
 
    const { form, errors, allErrors, constraints, message, enhance } = superForm(data.form, {
       taintedMessage: "Are you sure you want to leave?",
    });
-
-   let fadeOut: boolean = false;
-   let showToast: boolean = false;
-   let toastSuccess: boolean;
-
-   $: {
-      if ($message) {
-         fadeOut = false;
-         showToast = true;
-         toastSuccess = true;
-         setTimeout(() => {
-            fadeOut = true;
-            setTimeout(() => {
-               showToast = false;
-            }, 500); // Duration of the fade-out effect
-         }, 3000); // Show for 2.5 seconds, then fade out for 0.5 seconds
-      } else if ($allErrors.length > 0) {
-         fadeOut = false;
-         showToast = true;
-         toastSuccess = false;
-      }
-   }
 </script>
 
-{#if showToast}
-   <div class="toast toast-bottom toast-end {fadeOut ? 'fade-out' : ''}">
-      <div class="alert {toastSuccess ? 'alert-success' : 'alert-error'}">
-         <span
-            >{toastSuccess
-               ? "Message sent successfully!"
-               : "Couldn't send the message, please try again later"}</span>
-      </div>
-   </div>
-{/if}
+<Toast
+   {message}
+   {allErrors}
+   successMsg="Message sent successfully!"
+   errorMsg="Couldn't send the message, please try again" />
 
 <!-- <SuperDebug data={$form} /> -->
 
@@ -143,11 +117,6 @@
 </div>
 
 <style>
-   .fade-out {
-      opacity: 0;
-      transition: opacity 0.5s ease-out;
-   }
-
    small {
       margin-left: 8px;
       margin-top: 4px;
