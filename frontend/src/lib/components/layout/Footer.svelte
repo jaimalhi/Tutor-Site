@@ -21,7 +21,7 @@
          data-auto-recognition="true"
          href="mailto:aviotutor@gmail.com">
          <img src="/icons/mail.png" alt="email-icon" />
-         aviotutor@gmail.com
+         info@aviotutor.com
       </a>
       <a class="link link-hover" id="icons" href="tel:+17789890044">
          <img src="/icons/telephone.png" alt="email-icon" />

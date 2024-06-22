@@ -4,38 +4,49 @@
    export let data: PageData;
    import SuperDebug from "sveltekit-superforms";
 
-   const { form, errors, constraints, message, enhance } = superForm(data.form, {
+   const { form, errors, allErrors, constraints, message, enhance } = superForm(data.form, {
       taintedMessage: "Are you sure you want to leave?",
    });
 
-   let showToast = false;
-   let fadeOut = false;
+   let fadeOut: boolean = false;
+   let showToast: boolean = false;
+   let toastSuccess: boolean;
+
    $: {
       if ($message) {
-         showToast = true;
          fadeOut = false;
+         showToast = true;
+         toastSuccess = true;
          setTimeout(() => {
             fadeOut = true;
             setTimeout(() => {
                showToast = false;
             }, 500); // Duration of the fade-out effect
          }, 3000); // Show for 2.5 seconds, then fade out for 0.5 seconds
+      } else if ($allErrors.length > 0) {
+         fadeOut = false;
+         showToast = true;
+         toastSuccess = false;
       }
    }
 </script>
 
 {#if showToast}
    <div class="toast toast-bottom toast-end {fadeOut ? 'fade-out' : ''}">
-      <div class="alert alert-success">
-         <span>Message sent successfully!</span>
+      <div class="alert {toastSuccess ? 'alert-success' : 'alert-error'}">
+         <span
+            >{toastSuccess
+               ? "Message sent successfully!"
+               : "Couldn't send the message, please try again later"}</span>
       </div>
    </div>
 {/if}
 
+<!-- <SuperDebug data={$form} /> -->
+
 <!-- Contact Form -->
 <div
    class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-6">
-   <!-- <SuperDebug data={$form} /> -->
    <div class="w-3/4 lg:w-1/2">
       <h1 class="text-primary text-5xl lg:text-6xl font-semibold mb-4">Contact Us</h1>
       <p class="mb-4">
@@ -57,7 +68,7 @@
                   bind:value={$form.firstName}
                   {...constraints} />
                {#if $errors.firstName}
-                  <small>First Name must be at least 1 letter</small>
+                  <small>{$errors.firstName}</small>
                {/if}
             </label>
             <label class="form-control w-1/2">
@@ -72,8 +83,8 @@
                   aria-invalid={$errors.lastName ? "true" : undefined}
                   bind:value={$form.lastName}
                   {...constraints} />
-               {#if $errors.firstName}
-                  <small> Last Name must be at least 1 letter </small>
+               {#if $errors.lastName}
+                  <small>{$errors.lastName}</small>
                {/if}
             </label>
          </div>
@@ -90,7 +101,23 @@
                bind:value={$form.email}
                {...constraints} />
             {#if $errors.email}
-               <small>Invalid email address</small>
+               <small>{$errors.email}</small>
+            {/if}
+         </label>
+         <label class="form-control w-full">
+            <div class="label">
+               <span class="label-text text-primary">Retype Email</span>
+            </div>
+            <input
+               type="email"
+               placeholder="janedoe@example.com"
+               name="retypeEmail"
+               class="input input-ghost w-full {$errors.retypeEmail ? 'input-error' : ''}"
+               aria-invalid={$errors.retypeEmail ? "true" : undefined}
+               bind:value={$form.retypeEmail}
+               {...constraints} />
+            {#if $errors.retypeEmail}
+               <small>{$errors.retypeEmail}</small>
             {/if}
          </label>
          <label class="form-control max-h-48">
@@ -105,7 +132,7 @@
                bind:value={$form.message}
                {...constraints}></textarea>
             {#if $errors.message}
-               <small>Enter reason for contact</small>
+               <small>{$errors.message}</small>
             {/if}
          </label>
          <label class="form-control items-center">
