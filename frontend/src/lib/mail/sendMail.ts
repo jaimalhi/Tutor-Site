@@ -16,7 +16,7 @@ export async function sendMail(
    const formData = new FormData();
    formData.append("from", `Avio ${avioEmail}`);
    formData.append("to", avioEmail);
-   // formData.append("cc", "aviotutor@gmail.com");
+   formData.append("cc", "aviotutor@gmail.com");
    formData.append("subject", `${subject} <${email}>`);
    formData.append("html", `<h1>${subject} &lt;${email}&gt;</h1>${htmlBody}`);
    formData.append("text", `Subject: ${subject} <${email}>\n\nMessage: ${textBody}`);
