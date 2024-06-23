@@ -10,7 +10,7 @@ return {
 	assets: new Set(["aviotutor-favicon.ico","general/classroom.jpg","general/grad-cap.jpg","general/laptop.jpg","general/social.jpg","general/studying.jpg","global.css","hero-image.png","icons/attributions.txt","icons/biology.png","icons/chem.png","icons/coding.png","icons/earth-sci.png","icons/english.png","icons/history.png","icons/mail.png","icons/math.png","icons/physics.png","icons/telephone.png","logos/avio-dark.png","logos/avio-light.png"]),
 	mimeTypes: {".jpg":"image/jpeg",".css":"text/css",".png":"image/png",".txt":"text/plain"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.DjakiEdj.js","app":"_app/immutable/entry/app.R8Nvv151.js","imports":["_app/immutable/entry/start.DjakiEdj.js","_app/immutable/chunks/entry.9kZDOX55.js","_app/immutable/chunks/scheduler.gsXtY9CJ.js","_app/immutable/entry/app.R8Nvv151.js","_app/immutable/chunks/scheduler.gsXtY9CJ.js","_app/immutable/chunks/index.Cje8EYMh.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.CmS_swNP.js","app":"_app/immutable/entry/app.D259LR0x.js","imports":["_app/immutable/entry/start.CmS_swNP.js","_app/immutable/chunks/entry.ByF6esZq.js","_app/immutable/chunks/scheduler.gsXtY9CJ.js","_app/immutable/entry/app.D259LR0x.js","_app/immutable/chunks/scheduler.gsXtY9CJ.js","_app/immutable/chunks/index.Cje8EYMh.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
