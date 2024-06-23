@@ -37,7 +37,7 @@
 </script>
 
 {#if showToast}
-   <div class="toast toast-bottom toast-end {fadeOut ? 'fade-out' : ''}">
+   <div class="z-[100] toast toast-bottom toast-end {fadeOut ? 'fade-out' : ''}">
       <div class="alert {toastSuccess ? 'alert-success' : 'alert-error'}">
          <span>
             {toastSuccess ? successMsg : errorMsg}
