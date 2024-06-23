@@ -1,9 +1,10 @@
-import { building } from "$app/environment";
+import { DEV } from "esm-env";
 import { MAIL_KEY, PROD_MAIL_DOMAIN, DEV_MAIL_DOMAIN } from "$env/static/private";
 import { avioEmail } from "$lib/config/links.js";
 
 // Determine if we're building the app or running it
-const mailDomain: string = building ? PROD_MAIL_DOMAIN : DEV_MAIL_DOMAIN;
+const mailDomain: string = DEV ? DEV_MAIL_DOMAIN : PROD_MAIL_DOMAIN;
+console.log("Mail Domain: " + mailDomain);
 
 // Send email using fetch
 export async function sendMail(

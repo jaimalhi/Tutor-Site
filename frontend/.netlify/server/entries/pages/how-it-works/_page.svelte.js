@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, b as add_attribute } from "../../../chunks/ssr.js";
+import { c as create_ssr_component, v as validate_component, a as add_attribute } from "../../../chunks/ssr.js";
 import { I as InfoCard } from "../../../chunks/InfoCard.js";
 import { c as calendlyLink } from "../../../chunks/links.js";
 const css = {

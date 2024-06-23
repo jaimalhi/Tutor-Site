@@ -1,4 +1,5 @@
-import { c as create_ssr_component, f as each, e as escape, h as null_to_empty, b as add_attribute, v as validate_component } from "../../chunks/ssr.js";
+import { c as create_ssr_component, b as each, e as escape, a as add_attribute, v as validate_component } from "../../chunks/ssr.js";
+import { n as null_to_empty } from "../../chunks/lifecycle.js";
 import { I as InfoCard } from "../../chunks/InfoCard.js";
 const css$2 = {
   code: ".carousel.svelte-1c1rs61{display:flex;overflow:hidden;position:relative;width:100%}.carousel-track.svelte-1c1rs61{display:flex;width:calc(14 * 100% / 8);animation:svelte-1c1rs61-scroll 20s linear infinite}@keyframes svelte-1c1rs61-scroll{0%{transform:translateX(0)}100%{transform:translateX(-60%)}}@media(max-width: 768px){.carousel-track.svelte-1c1rs61{animation:svelte-1c1rs61-scrollMobile 20s linear infinite}}@keyframes svelte-1c1rs61-scrollMobile{0%{transform:translateX(0)}100%{transform:translateX(-200%)}}",
