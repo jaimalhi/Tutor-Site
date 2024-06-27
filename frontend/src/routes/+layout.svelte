@@ -7,6 +7,7 @@
 
 <svelte:head>
    <title>Avio Tutor</title>
+   <meta property="title" content="Avio Tutor - Personalized 1-on-1 Tutoring" />
    <meta
       name="description"
       content="Avio Tutor provides personalized one-on-one tutoring for students of all ages. We offer flexible scheduling with virtual sessions. Our goal is to boost confidence, enhance critical thinking skills, and help students achieve academic success." />
