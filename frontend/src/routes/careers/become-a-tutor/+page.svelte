@@ -16,7 +16,7 @@
    errorMsg="Couldn't send the application, please try again" />
 
 <div
-   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-10 pt-6 md:pt-28">
+   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-10 pt-6 lg:pt-28">
    <div class="w-3/4 lg:w-1/2">
       <h1 class="text-primary text-5xl lg:text-6xl font-semibold mb-4">Become a Tutor</h1>
       <p class="mb-4">

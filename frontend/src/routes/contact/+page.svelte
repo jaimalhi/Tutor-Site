@@ -20,7 +20,7 @@
 
 <!-- Contact Form -->
 <div
-   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-6">
+   class="flex flex-col justify-center items-center text-base-100 bg-neutral-content min-h-screen pb-6 pt-6 lg:pt-28">
    <div class="w-3/4 lg:w-1/2">
       <h1 class="text-primary text-5xl lg:text-6xl font-semibold mb-4">Contact Us</h1>
       <p class="mb-4">
