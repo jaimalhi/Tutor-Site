@@ -39,6 +39,10 @@ export const actions = {
       try {
          const response = await sendMail(form.data.email, subjectLine, textBody, htmlBody);
          console.log("Response: " + response);
+         // You can only send one email every 10 minutes.
+         if (response === null) {
+            return setError(form, "", "401");
+         }
       } catch (error) {
          console.error("Error: " + error);
          // use setError to set a form-level error and display toast message

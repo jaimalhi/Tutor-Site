@@ -26,6 +26,7 @@
       <p class="mb-4">
          Got questions or need assistance? We're here to help! Reach out to us using the form below,
          and our support team will respond within 24 hours.
+         <small>You can only send one message every 10 minutes. </small>
       </p>
       <form method="POST" class="space-y-2" use:enhance>
          <div class="flex space-x-3">
