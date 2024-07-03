@@ -4,6 +4,8 @@ import { superValidate } from "sveltekit-superforms/server";
 import { message, setError, fail } from "sveltekit-superforms";
 import type { Actions } from "./$types.ts";
 import { sendMail } from "$lib/mail/sendMail.js";
+import { validateToken } from "$lib/security/validateCaptcha.ts";
+import { CAPTCHA_SECRET_KEY } from "$env/static/private";
 
 const contactSchema = z
    .object({
@@ -12,6 +14,7 @@ const contactSchema = z
       email: z.string().email("Invalid email, requires @ and ."),
       retypeEmail: z.string().email("Invalid email, requires @ and ."),
       message: z.string().min(2, "Message details are required"),
+      captchaToken: z.string(),
    })
    .refine((data) => data.email === data.retypeEmail, {
       message: "Emails don't match!",
@@ -29,6 +32,14 @@ export const actions = {
 
       if (!form.valid) {
          return fail(400, { form });
+      }
+
+      // validate the captcha
+      const token = form.data.captchaToken;
+      const { success } = await validateToken(token, CAPTCHA_SECRET_KEY);
+      // captcah validation failed
+      if (!success) {
+         return setError(form, "", "401");
       }
 
       // send contact info and request to avio email

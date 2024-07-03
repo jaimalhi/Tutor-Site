@@ -1,9 +1,11 @@
 <script lang="ts">
+   //    import SuperDebug from "sveltekit-superforms";
    import { superForm } from "sveltekit-superforms";
    import type { PageData } from "./$types.ts";
    export let data: PageData;
    import Toast from "$lib/components/utils/Toast.svelte";
-   import SuperDebug from "sveltekit-superforms";
+   import { Turnstile } from "svelte-turnstile";
+   import { CAPTCHA_SITE_KEY } from "$lib/config/links.js";
 
    const { form, errors, allErrors, constraints, message, enhance } = superForm(data.form, {
       taintedMessage: "Are you sure you want to leave?",
@@ -26,7 +28,8 @@
       <p class="mb-4">
          Got questions or need assistance? We're here to help! Reach out to us using the form below,
          and our support team will respond within 24 hours.
-         <small>You can only send one message every 10 minutes. </small>
+         <br />
+         <span class="opacity-50 text-sm">You can only send one message every 10 minutes. </span>
       </p>
       <form method="POST" class="space-y-2" use:enhance>
          <div class="flex space-x-3">
@@ -111,7 +114,8 @@
             {/if}
          </label>
          <label class="form-control items-center">
-            <button class="btn btn-primary w-1/2 mt-4">Send Message</button>
+            <button class="btn btn-primary w-1/2 my-4">Send Message</button>
+            <Turnstile siteKey={CAPTCHA_SITE_KEY} responseFieldName="captchaToken" />
          </label>
       </form>
    </div>
