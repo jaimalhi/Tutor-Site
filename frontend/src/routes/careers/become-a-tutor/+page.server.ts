@@ -4,6 +4,8 @@ import { superValidate } from "sveltekit-superforms/server";
 import { message, setError, fail } from "sveltekit-superforms";
 import type { Actions } from "./$types.ts";
 import { sendMail } from "$lib/mail/sendMail.js";
+import { validateToken } from "$lib/security/validateCaptcha.ts";
+import { CAPTCHA_SECRET_KEY } from "$env/static/private";
 
 const contactSchema = z
    .object({
@@ -19,6 +21,7 @@ const contactSchema = z
       resumeUpload: z
          .instanceof(File, { message: "Resume upload is required" })
          .refine((f) => f.size < 200_000, "Max 200 kB upload size."),
+      captchaToken: z.string().min(1, "Captcha token is required"),
    })
    .refine((data) => data.email === data.retypeEmail, {
       message: "Emails don't match!",
@@ -38,6 +41,14 @@ export const actions = {
          return fail(400, { form });
       }
 
+      // validate the captcha
+      const token = form.data.captchaToken;
+      const { success, error } = await validateToken(token, CAPTCHA_SECRET_KEY);
+      if (!success) {
+         console.log("Captcha Error: " + error);
+         return setError(form, "", `${error || "Invalid CAPTCHA"}`, { status: 408 });
+      }
+
       // send request to avio email
       const resume = form.data.resumeUpload;
       const subjectLine = `Tutor Application: ${form.data.firstName} ${form.data.lastName}`;
@@ -47,10 +58,17 @@ export const actions = {
       try {
          const response = await sendMail(form.data.email, subjectLine, textBody, htmlBody, resume);
          console.log("Response: " + response);
+         if (response === null) {
+            return setError(form, "", "You can only send one application every 10 minutes", {
+               status: 401,
+            });
+         }
       } catch (error) {
          console.error("Error: " + error);
-         // use setError to set a form-level error and display toast message
-         return setError(form, "", "400");
+         // set a form-level error and display toast message
+         return setError(form, "", "General Form Level error", {
+            status: 400,
+         });
       }
       return message(form, "Form posted successfully!");
    },

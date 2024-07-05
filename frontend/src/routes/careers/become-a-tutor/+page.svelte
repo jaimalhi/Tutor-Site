@@ -3,10 +3,18 @@
    import type { PageData } from "./$types.ts";
    import Toast from "$lib/components/utils/Toast.svelte";
    export let data: PageData;
+   import { Turnstile } from "svelte-turnstile";
+   import { CAPTCHA_SITE_KEY } from "$lib/config/links.js";
 
    const { form, errors, allErrors, constraints, message, enhance } = superForm(data.form, {
       taintedMessage: "Are you sure you want to leave?",
    });
+
+   let captchaToken = "";
+   function captchaCallback(event: any) {
+      captchaToken = event.detail.token;
+      $form.captchaToken = captchaToken;
+   }
 </script>
 
 <Toast
@@ -23,6 +31,10 @@
          Thank you for your interest in joining our team at Avio Tutor! Please fill out the form
          below as your application to become a tutor with us. We will review your application and
          get back to you within 3-5 business days.
+         <br />
+         <span class="opacity-50 text-sm"
+            >You can only send one application every 10 minutes.
+         </span>
       </p>
       <form method="POST" enctype="multipart/form-data" class="space-y-2" use:enhance>
          <div class="flex space-x-3">
@@ -191,7 +203,19 @@
             {/if}
          </label>
          <label class="form-control items-center">
-            <button type="submit" class="btn btn-primary w-1/2 mt-4">Submit Application</button>
+            <button type="submit" class="btn btn-primary w-1/2 my-4">Submit Application</button>
+         </label>
+         <label class="form-control items-center">
+            <input
+               type="text"
+               name="captchaToken"
+               class="hidden"
+               bind:value={$form.captchaToken}
+               {...constraints} />
+            <Turnstile
+               siteKey={CAPTCHA_SITE_KEY}
+               responseFieldName="captchaToken"
+               on:callback={captchaCallback} />
          </label>
       </form>
    </div>
