@@ -9,7 +9,14 @@
 
    const { form, errors, allErrors, constraints, message, enhance } = superForm(data.form, {
       taintedMessage: "Are you sure you want to leave?",
+      clearOnSubmit: "none",
    });
+
+   let captchaToken = "";
+   function captchaCallback(event: any) {
+      captchaToken = event.detail.token;
+      $form.captchaToken = captchaToken;
+   }
 </script>
 
 <Toast
@@ -17,8 +24,6 @@
    {allErrors}
    successMsg="Message sent successfully!"
    errorMsg="Couldn't send the message, please try again" />
-
-<!-- <SuperDebug data={$form} /> -->
 
 <!-- Contact Form -->
 <div
@@ -114,12 +119,25 @@
             {/if}
          </label>
          <label class="form-control items-center">
-            <button class="btn btn-primary w-1/2 my-4">Send Message</button>
-            <Turnstile siteKey={CAPTCHA_SITE_KEY} responseFieldName="captchaToken" />
+            <button class="btn btn-primary w-1/2 my-4" type="submit">Send Message</button>
+         </label>
+         <label class="form-control items-center">
+            <input
+               type="text"
+               name="captchaToken"
+               class="hidden"
+               bind:value={$form.captchaToken}
+               {...constraints} />
+            <Turnstile
+               siteKey={CAPTCHA_SITE_KEY}
+               responseFieldName="captchaToken"
+               on:callback={captchaCallback} />
          </label>
       </form>
    </div>
 </div>
+
+<!-- <SuperDebug data={$form} /> -->
 
 <style>
    small {

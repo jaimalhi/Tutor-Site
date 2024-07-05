@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { zod } from "sveltekit-superforms/adapters";
-import { superValidate } from "sveltekit-superforms/server";
-import { message, setError, fail } from "sveltekit-superforms";
+import { message, setError, fail, superValidate } from "sveltekit-superforms";
 import type { Actions } from "./$types.ts";
 import { sendMail } from "$lib/mail/sendMail.js";
 import { validateToken } from "$lib/security/validateCaptcha.ts";
@@ -14,7 +13,7 @@ const contactSchema = z
       email: z.string().email("Invalid email, requires @ and ."),
       retypeEmail: z.string().email("Invalid email, requires @ and ."),
       message: z.string().min(2, "Message details are required"),
-      captchaToken: z.string(),
+      captchaToken: z.string().min(1, "Captcha token is required"),
    })
    .refine((data) => data.email === data.retypeEmail, {
       message: "Emails don't match!",
@@ -29,17 +28,16 @@ export const actions = {
    default: async ({ request }) => {
       const form = await superValidate(request, zod(contactSchema));
       //   console.log(form);
-
       if (!form.valid) {
          return fail(400, { form });
       }
 
       // validate the captcha
       const token = form.data.captchaToken;
-      const { success } = await validateToken(token, CAPTCHA_SECRET_KEY);
-      // captcah validation failed
+      const { success, error } = await validateToken(token, CAPTCHA_SECRET_KEY);
       if (!success) {
-         return setError(form, "", "401");
+         console.log("Captcha Error: " + error);
+         return setError(form, "", `${error || "Invalid CAPTCHA"}`, { status: 408 });
       }
 
       // send contact info and request to avio email
@@ -50,14 +48,17 @@ export const actions = {
       try {
          const response = await sendMail(form.data.email, subjectLine, textBody, htmlBody);
          console.log("Response: " + response);
-         // You can only send one email every 10 minutes.
          if (response === null) {
-            return setError(form, "", "401");
+            return setError(form, "", "You can only send one email every 10 minutes", {
+               status: 401,
+            });
          }
       } catch (error) {
          console.error("Error: " + error);
-         // use setError to set a form-level error and display toast message
-         return setError(form, "", "400");
+         // set a form-level error and display toast message
+         return setError(form, "", "General Form Level error", {
+            status: 400,
+         });
       }
       return message(form, "Form posted successfully!");
    },
