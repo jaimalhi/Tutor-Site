@@ -1,0 +1,67 @@
+{
+   "name": "frontend",
+   "version": "0.0.1",
+   "scripts": {
+      "dev": "vite dev",
+      "build": "vite build && npm run package",
+      "preview": "vite preview",
+      "package": "svelte-kit sync && svelte-package && publint",
+      "prepublishOnly": "npm run package",
+      "test": "npm run test:integration && npm run test:unit",
+      "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+      "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+      "lint": "eslint .",
+      "test:integration": "playwright test",
+      "test:unit": "vitest"
+   },
+   "exports": {
+      ".": {
+         "types": "./dist/index.d.ts",
+         "svelte": "./dist/index.js"
+      }
+   },
+   "files": [
+      "dist",
+      "!dist/**/*.test.*",
+      "!dist/**/*.spec.*"
+   ],
+   "peerDependencies": {
+      "svelte": "^4.0.0"
+   },
+   "devDependencies": {
+      "@playwright/test": "^1.28.1",
+      "@sveltejs/adapter-auto": "^3.0.0",
+      "@sveltejs/adapter-netlify": "^4.2.1",
+      "@sveltejs/adapter-vercel": "^5.3.2",
+      "@sveltejs/kit": "^2.0.0",
+      "@sveltejs/package": "^2.0.0",
+      "@sveltejs/vite-plugin-svelte": "^3.0.0",
+      "@types/eslint": "^8.56.7",
+      "@types/node": "^20.14.7",
+      "autoprefixer": "^10.4.19",
+      "daisyui": "^4.11.1",
+      "eslint": "^9.0.0",
+      "eslint-plugin-svelte": "^2.36.0",
+      "globals": "^15.0.0",
+      "postcss": "^8.4.38",
+      "publint": "^0.1.9",
+      "svelte": "^4.2.7",
+      "svelte-check": "^3.6.0",
+      "svelte-turnstile": "^0.7.0",
+      "sveltekit-superforms": "^2.15.1",
+      "tailwindcss": "^3.4.3",
+      "tslib": "^2.4.1",
+      "typescript": "^5.0.0",
+      "typescript-eslint": "^8.0.0-alpha.20",
+      "vite": "^5.0.11",
+      "vitest": "^1.2.0",
+      "zod": "^3.23.8"
+   },
+   "svelte": "./dist/index.js",
+   "types": "./dist/index.d.ts",
+   "type": "module",
+   "dependencies": {
+      "@sveltejs/kit": "^1.0.0",
+      "esm-env": "^1.0.0"
+   }
+}
