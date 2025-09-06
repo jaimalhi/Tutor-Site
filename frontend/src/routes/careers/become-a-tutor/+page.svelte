@@ -205,7 +205,7 @@
          <label class="form-control items-center">
             <button type="submit" class="btn btn-primary w-1/2 my-4">Submit Application</button>
          </label>
-         <label class="form-control items-center">
+         <!-- <label class="form-control items-center">
             <input
                type="text"
                name="captchaToken"
@@ -216,7 +216,7 @@
                siteKey={CAPTCHA_SITE_KEY}
                responseFieldName="captchaToken"
                on:callback={captchaCallback} />
-         </label>
+         </label> -->
       </form>
    </div>
 </div>

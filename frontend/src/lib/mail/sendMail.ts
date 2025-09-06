@@ -1,6 +1,6 @@
 import { DEV } from "esm-env";
 import { MAIL_KEY, PROD_MAIL_DOMAIN, DEV_MAIL_DOMAIN } from "$env/static/private";
-import { avioEmail } from "$lib/config/links.js";
+import { avioEmail, avioEmail2 } from "$lib/config/links.js";
 
 // In-memory store for rate limiting
 const rateLimitStore = new Map();
@@ -40,7 +40,7 @@ export async function sendMail(
    const formData = new FormData();
    formData.append("from", `Avio ${avioEmail}`);
    formData.append("to", avioEmail);
-   formData.append("cc", "aviotutor@gmail.com");
+   formData.append("cc", avioEmail2);
    formData.append("subject", `${subject} <${email}>`);
    formData.append("html", `<h1>${subject} &lt;${email}&gt;</h1>${htmlBody}`);
    formData.append("text", `Subject: ${subject} <${email}>\n\nMessage: ${textBody}`);

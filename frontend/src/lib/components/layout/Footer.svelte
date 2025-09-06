@@ -1,3 +1,7 @@
+<script>
+   import { avioEmail2 } from "$lib/config/links.js";
+</script>
+
 <footer class="footer p-10 bg-neutral text-base-100">
    <nav>
       <a href="/">
@@ -19,13 +23,9 @@
    </nav>
    <nav>
       <h6 class="footer-title">Contact</h6>
-      <a
-         class="link link-hover"
-         id="icons"
-         data-auto-recognition="true"
-         href="mailto:aviotutor@gmail.com">
+      <a class="link link-hover" id="icons" data-auto-recognition="true" href="mailto:{avioEmail2}">
          <img src="/icons/mail.png" alt="email-icon" />
-         info@aviotutor.com
+         {avioEmail2}
       </a>
       <a class="link link-hover" id="icons" href="tel:+17789890044">
          <img src="/icons/telephone.png" alt="email-icon" />
